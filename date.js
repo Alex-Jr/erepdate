@@ -21,6 +21,15 @@ window.onload = function(){
         }
         article_dates[i].innerText = addDays(initdate, days);
     }
+
+    comments_dates = document.getElementsByClassName('replyDetails');
+    for (i = 0; i < comments_dates.length; i++){
+        days = parseInt(comments_dates[i].children[0].innerText.split(" ")[1].replace(',','').replace(',',''));
+        if (days !== days){
+            continue
+        }
+        comments_dates[i].innerText = addDays(initdate, days);
+    }
 };
 
 function addDays(date, days) {
