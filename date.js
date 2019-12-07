@@ -9,12 +9,18 @@ window.onload = function(){
     feed_dates = document.getElementsByClassName('time_posted');
     for (i = 0; i < feed_dates.length; i++){
         days = parseInt(feed_dates[i].innerText.substr(4).replace(',',''));
+        if (days !== days){
+            continue
+        }
         feed_dates[i].innerText = addDays(initdate, days);
     }
 
     article_dates = document.getElementsByClassName('date');
     for (i = 1; i < article_dates.length; i++){
         days = parseInt(article_dates[i].innerText.substr(4).replace(',',''));
+        if (days !== days){
+            continue
+        }
         article_dates[i].innerText = addDays(initdate, days);
     }
 };
