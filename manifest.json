@@ -1,11 +1,17 @@
 {
     "name": "eRepDates",
     "version": "1.0",
-    "description": "eRep Date to gregorian calendar",
+    "description": "eRep Date to Gregorian Calendar",
     "content_scripts": [{
         "js": ["date.js"],
         "matches": ["https://www.erepublik.com/*"]
       }],
+    "icons": {
+    "16": "eRepdateICO.png",
+    "32": "eRepdateICO.png",
+    "48": "eRepdateICO.png",
+    "128": "eRepdateICO.png"
+    },
     "manifest_version": 2
 }
 
