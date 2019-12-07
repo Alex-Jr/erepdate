@@ -1,9 +1,12 @@
-const initdate = new Date('11/20/2007');
 
-c_header = document.getElementsByClassName('eday')[0];
+window.onload = function(){
+    const initdate = new Date('11/20/2007');
 
-c_header.innerText = addDays(initdate, parseInt(c_header.innerText.substring(4).replace(',','')))    
+    c_header = document.getElementsByClassName('eday')[0];
 
+    c_header.innerText = addDays(initdate, parseInt(c_header.innerText.substring(4).replace(',','')))    
+
+};
 
 function addDays(date, days) {
     var result = new Date(date);
