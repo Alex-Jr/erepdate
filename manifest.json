@@ -1,0 +1,12 @@
+{
+    "name": "eRepDates",
+    "version": "1.0",
+    "description": "eRep Date to gregorian calendar",
+    "content_scripts": [{
+        "js": ["date.js"],
+        "matches": ["https://www.erepublik.com/*"]
+      }],
+    "manifest_version": 2
+}
+
+
