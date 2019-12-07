@@ -26,11 +26,12 @@ window.onload = function(){
 
     comments_dates = document.getElementsByClassName('replyDetails');
     for (i = 0; i < comments_dates.length; i++){
-        days = parseInt(comments_dates[i].children[0].innerText.split(" ")[1].replace(',','').replace(',',''));
+        aux = comments_dates[i].children[0].innerText.split(" ");
+        days = parseInt(aux[1].replace(',','').replace(',',''));
         if (days !== days){
             continue
         }
-        comments_dates[i].innerText = addDays(initdate, days);
+        comments_dates[i].children[0].innerText = addDays(initdate, days) + ' ' + aux[2];
     }
 
     mu_founded = document.getElementsByClassName('muFounded')[0].children[1].children[0]
