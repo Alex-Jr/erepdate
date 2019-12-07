@@ -30,6 +30,11 @@ window.onload = function(){
         }
         comments_dates[i].innerText = addDays(initdate, days);
     }
+
+    mu_founded = document.getElementsByClassName('muFounded')[0].children[1].children[0]
+    if(mu_founded){
+        mu_founded.innerText = addDays(initdate ,parseInt(mu_founded.innerText.substring(4).replace(',','')))
+    }
 };
 
 function addDays(date, days) {
