@@ -11,6 +11,12 @@ window.onload = function(){
         days = parseInt(feed_dates[i].innerText.substr(4).replace(',',''));
         feed_dates[i].innerText = addDays(initdate, days);
     }
+
+    article_dates = document.getElementsByClassName('date');
+    for (i = 1; i < article_dates.length; i++){
+        days = parseInt(article_dates[i].innerText.substr(4).replace(',',''));
+        article_dates[i].innerText = addDays(initdate, days);
+    }
 };
 
 function addDays(date, days) {
