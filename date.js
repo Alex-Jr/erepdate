@@ -20,17 +20,17 @@ window.onload = function(){
 
     comments_dates = document.getElementsByClassName('replyDetails');
     for (i = 0; i < comments_dates.length; i++){
-        aux = comments_dates[i].children[0].innerText.split(" ");
-        days = parseInt(aux[1].replace(',','').replace(',',''));
+        words = comments_dates[i].children[0].innerText.split(" ");
+        days = parseInt(words[1].replace(',','').replace(',',''));
         if (days !== days){
             continue
         }
-        comments_dates[i].children[0].innerText = addDays(initdate, days) + ' ' + aux[2];
+        comments_dates[i].children[0].innerText = addDays(initdate, days) + ' ' + words[2];
     }
 
     mu_founded = document.getElementsByClassName('muFounded')[0]
     if(mu_founded !== undefined){
-        mu_founded.innerText = addDays(initdate ,parseInt(mu_founded.children[1].children[0].innerText.substring(4).replace(',','')))
+        mu_founded.children[1].children[0].innerText = addDays(initdate ,parseInt(mu_founded.children[1].children[0].innerText.substring(4).replace(',','')))
     }
 
     military = document.getElementsByClassName('citizen_military')[1]
@@ -68,6 +68,6 @@ function feedDate(){
                 continue
             }
         feed_dates[i].innerText = addDays(initdate, days);
-    }
+        }
     }, 2000);   
 }
