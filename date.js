@@ -38,6 +38,24 @@ window.onload = function(){
     if(mu_founded !== undefined){
         mu_founded.innerText = addDays(initdate ,parseInt(mu_founded.children[1].children[0].innerText.substring(4).replace(',','')))
     }
+
+    military = document.getElementsByClassName('citizen_military')[1]
+    if(military !== undefined){
+        words = military.children[2].firstElementChild.innerText.split(' ')
+        size = words.length-1
+        words[size] = addDays(initdate, parseInt(words[size].replace(',', '')))
+
+        military.children[2].firstElementChild.innerText = words.join(' ')
+        }
+    
+    mas_destruction = document.getElementsByClassName('citizen_mass_destruction')[0]
+    if(mas_destruction !== undefined){
+        words = mas_destruction.lastElementChild.innerText.split(' ')
+        size = words.length-1
+        words[size] = addDays(initdate, parseInt(words[size].replace(',', '')))
+
+        mas_destruction.lastElementChild.innerText = words.join(' ')
+    }
 };
 
 function addDays(date, days) {
