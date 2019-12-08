@@ -69,5 +69,5 @@ function feedDate(){
             }
         feed_dates[i].innerText = addDays(initdate, days);
     }
-    }, 3000);   
+    }, 2000);   
 }
