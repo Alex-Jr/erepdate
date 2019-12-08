@@ -34,9 +34,9 @@ window.onload = function(){
         comments_dates[i].children[0].innerText = addDays(initdate, days) + ' ' + aux[2];
     }
 
-    mu_founded = document.getElementsByClassName('muFounded')[0].children[1].children[0]
-    if(mu_founded){
-        mu_founded.innerText = addDays(initdate ,parseInt(mu_founded.innerText.substring(4).replace(',','')))
+    mu_founded = document.getElementsByClassName('muFounded')[0]
+    if(mu_founded !== undefined){
+        mu_founded.innerText = addDays(initdate ,parseInt(mu_founded.children[1].children[0].innerText.substring(4).replace(',','')))
     }
 };
 
