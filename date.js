@@ -1,12 +1,6 @@
 const initdate = new Date('11/20/2007');
 
 window.onload = function(){
-    eday = document.getElementsByClassName('eday')[0];
-    ndate = document.getElementsByClassName('date')[0];
-    aux = eday.innerText;
-    eday.innerText = addDays(initdate, parseInt(eday.innerText.substring(4).replace(',','')));  
-    ndate.innerText = aux;
-
     feedDate()
     switchers = document.getElementsByClassName('switchers')
     for (i = 0; i < switchers.length; i++){
